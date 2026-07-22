@@ -1,0 +1,31 @@
+<%= form_with model: @job_posting do |f| %>
+
+    <%= f.label :company_name %>
+    <%= f.text_field :company_name %>
+
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+
+    <%= f.label :requirements %>
+    <%= f.text_area :requirements %>
+
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+    
+    <%= f.label :salary %>
+    <%= f.text_field :salary %>
+
+    <%= f.label :location %>
+    <%= f.text_field :location %>
+
+    <%= f.submit %>
+
+<% end %>
+
+
+
+
+
+
+
+    
