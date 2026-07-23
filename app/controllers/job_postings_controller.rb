@@ -17,6 +17,11 @@ class JobPostingsController < ApplicationController
     @job_posting = JobPosting.find(params[:id])
   end
 
+  def index
+    @job_postings = JobPosting.all
+  end
+  
+
   private
 
   def job_posting_params
