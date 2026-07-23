@@ -1,0 +1,37 @@
+<h1>求人一覧</h1>
+
+<% @job_postings.each do |job_posting| %>
+    <p>
+      <strong>会社名:</strong>
+      <%= job_posting.company_name %>
+    </p>
+
+    <p>
+      <strong>求人タイトル:</strong>
+      <%= job_posting.title %>
+    </p>
+
+    <p>
+      <strong>応募条件:</strong>
+      <%= job_posting.requirements %>
+    </p>
+
+    <p>
+      <strong>仕事内容:</strong>
+      <%= job_posting.description %>
+    </p>
+
+    <p>
+      <strong>給与:</strong>
+      <%= job_posting.salary %>
+    </p>
+
+    <p>
+      <strong>勤務地:</strong>
+      <%= job_posting.location %>
+    </p>
+
+    <%= link_to "詳細", job_posting_path(job_posting) %>
+
+    <hr>   
+<% end %>
