@@ -21,6 +21,18 @@ class JobPostingsController < ApplicationController
     @job_postings = JobPosting.all
   end
   
+  def edit
+    @job_posting = JobPosting.find(params[:id])
+  end
+
+  def update
+    @job_posting = JobPosting.find(params[:id])
+    if @job_posting.update(job_posting_params)
+        redirect_to @job_posting
+    else
+        render :edit
+    end
+  end
 
   private
 
