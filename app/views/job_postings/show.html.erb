@@ -30,6 +30,8 @@
   <%= @job_posting.location %>
 </p>
 
+<%= link_to "編集", edit_job_posting_path(@job_posting) %>
+
 <%= link_to "削除",
             job_posting_path(@job_posting),
             data: { turbo_method: :delete } %>

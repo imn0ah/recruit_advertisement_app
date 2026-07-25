@@ -20,7 +20,7 @@ class JobPostingsController < ApplicationController
   def index
     @job_postings = JobPosting.all
   end
-  
+
   def edit
     @job_posting = JobPosting.find(params[:id])
   end
@@ -36,7 +36,7 @@ class JobPostingsController < ApplicationController
 
   def destroy
     @job_posting = JobPosting.find(params[:id])
-    
+
     @job_posting.destroy
 
     redirect_to job_postings_path
