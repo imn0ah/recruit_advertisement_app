@@ -34,6 +34,14 @@ class JobPostingsController < ApplicationController
     end
   end
 
+  def destroy
+    @job_posting = JobPosting.find(params[:id])
+    
+    @job_posting.destroy
+
+    redirect_to job_postings_path
+  end
+
   private
 
   def job_posting_params

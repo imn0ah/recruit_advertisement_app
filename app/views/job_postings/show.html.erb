@@ -29,3 +29,8 @@
   <strong>勤務地:</strong>
   <%= @job_posting.location %>
 </p>
+
+<%= link_to "削除",
+            job_posting_path(@job_posting),
+            data: { turbo_method: :delete } %>
+
