@@ -3,27 +3,31 @@ class ChatGptService
         prompt = build_prompt(job_posting)
 
         #APIを呼び出す
-        client = OpenAI::Client.new
+        #client = OpenAI::Client.new
 
-        response = client.chat(
-            parameters: {
-                model: "",
-                messages:[
-                    {
-                        role: "user",
-                        content: prompt
-                    }
-                ]
-            }
-        )
+        #response = client.chat(
+            #parameters: {
+                #model: "gpt-5",
+                #messages:[
+                    #{
+                        #role: "user",
+                        #content: prompt
+                    #}
+                #]
+            #}
+        #)
 
         #chatgpt apiで作成した文章を取り出す
-        generated_text = response.dig(
-            "choices",
-            0,
-            "message",
-            "content"
-        )
+        #generated_text = response.dig(
+            #"choices",
+            #0,
+            #"message",
+            #"content"
+        #)
+
+        generated_text = <<~TEXT
+        【テスト用求人】
+        TEXT
 
         generated_text
     end
@@ -41,7 +45,7 @@ class ChatGptService
           #{job_posting.title}
 
           応募条件
-          #{job_posting.requirement}
+          #{job_posting.requirements}
 
           求人詳細
           #{job_posting.description}
@@ -50,7 +54,7 @@ class ChatGptService
           #{job_posting.salary}
 
           勤務地
-          #{job_posting.salary}
+          #{job_posting.location}
         TEXT
     end
 end

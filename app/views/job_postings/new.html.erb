@@ -2,4 +2,11 @@
 
 <%= render "form", submit_text: "作成する" %>
 
+<% if @job_posting.ai_generated_text.present? %>
+    <h2>求人広告</h2>
+
+    <%= simple_format(@job_posting.ai_generated_text) %>
+<% end %>
+
+
     
