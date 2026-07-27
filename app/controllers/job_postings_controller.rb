@@ -6,40 +6,9 @@ class JobPostingsController < ApplicationController
   def create
     @job_posting = JobPosting.new(job_posting_params)
 
-    if @job_posting.save
-      redirect_to @job_posting
-    else
-      render :new
-    end
-  end
+    @job_posting.ai_generated_text = ChatGptService.generate(@job_posting)
 
-  def show
-    @job_posting = JobPosting.find(params[:id])
-  end
-
-  def index
-    @job_postings = JobPosting.all
-  end
-
-  def edit
-    @job_posting = JobPosting.find(params[:id])
-  end
-
-  def update
-    @job_posting = JobPosting.find(params[:id])
-    if @job_posting.update(job_posting_params)
-        redirect_to @job_posting
-    else
-        render :edit
-    end
-  end
-
-  def destroy
-    @job_posting = JobPosting.find(params[:id])
-
-    @job_posting.destroy
-
-    redirect_to job_postings_path
+    render :new
   end
 
   private
