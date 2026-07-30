@@ -119,6 +119,7 @@ GEM
       net-http (~> 0.5)
     globalid (1.4.0)
       activesupport (>= 6.1)
+    htmlbeautifier (1.4.3)
     i18n (1.15.2)
       concurrent-ruby (~> 1.0)
     io-console (0.8.2)
@@ -347,6 +348,7 @@ DEPENDENCIES
   capybara
   cssbundling-rails
   debug
+  htmlbeautifier
   jbuilder
   jsbundling-rails
   pg (~> 1.1)
@@ -399,6 +401,7 @@ CHECKSUMS
   faraday-multipart (1.2.0) sha256=7d89a949693714176f612323ca13746a2ded204031a6ba528adee788694ef757
   faraday-net_http (3.4.4) sha256=0e78af151747ed1b00f33e25973b4bc220d7f16c00c39676817c8b12331eb588
   globalid (1.4.0) sha256=037f12fbf1d9d7a014d501c2d5c77356fd4ddd96d7a7991d6700bba96706f427
+  htmlbeautifier (1.4.3) sha256=b43d08f7e2aa6ae1b5a6f0607b4ed8954c8d4a8e85fd2336f975dda1e4db385b
   i18n (1.15.2) sha256=00f9eb62412fe593b2a65a97daa75300d37abb8f7202ec748e94b6d46a9dd1b5
   io-console (0.8.2) sha256=d6e3ae7a7cc7574f4b8893b4fca2162e57a825b223a177b7afa236c5ef9814cc
   irb (1.18.0) sha256=de9454a0703a54704b9811a5ef31a60c86949fbf4013fcf244fabc7c775248e3
